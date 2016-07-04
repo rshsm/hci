@@ -1,0 +1,7 @@
+# this snippet should be inserted into /var/www/html/.htaccess
+# rest.php should be located at /var/www/html/rest.php, soft link works also
+# rest/ should be located at /var/www/html/rest/, soft link works also
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule ^face/(.*) rest.php?/face/$1 [QSA]
+</IfModule>
